@@ -1,6 +1,5 @@
-#Avya 1.0
 ![](https://github.com/nasrawiziad/Avya/blob/main/Logo/avyalogo.png?raw=true)
-
+#Avya 1.0
 ####Introducing Avya:
 The ultimate notification banners hiding tweak.
 Disabling notifications for any app in a click of a button!
