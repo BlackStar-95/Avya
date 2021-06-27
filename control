@@ -2,8 +2,9 @@ Package: blackstar
 Name: Avya
 Version: 0.0.1
 Architecture: iphoneos-arm
-Description: An awesome MobileSubstrate tweak!
+Description: ***Requires Activator*** The ultimate notification banners hiding tweak.Disabling notifications for any app in a click of a button!
 Maintainer: blackstar
 Author: blackstar
 Section: Tweaks
 Depends: mobilesubstrate (>= 0.9.5000)
+

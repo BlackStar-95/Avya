@@ -1,5 +1,5 @@
-/Users/ziadnasrawi/avya/.theos/obj/debug/arm64e/Tweak.xm.a6ed36f2.o: \
-  /Users/ziadnasrawi/avya/.theos/obj/debug/arm64e/Tweak.xm.mm \
+/Users/ziadnasrawi/avya/.theos/obj/debug/arm64/Tweak.xm.c9142786.o: \
+  /Users/ziadnasrawi/avya/.theos/obj/debug/arm64/Tweak.xm.mm \
   /Users/ziadnasrawi/theos/Prefix.pch \
   /Users/ziadnasrawi/theos/vendor/include/theos/BackwardsCompat.h \
   /Users/ziadnasrawi/theos/sdks/iPhoneOS14.4.sdk/usr/include/mach-o/compact_unwind_encoding.modulemap \

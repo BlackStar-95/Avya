@@ -1,6 +1,11 @@
 #line 1 "Tweak.xm"
 #import "Tweak.h"
 #include "activatorheaders/libactivator.h"
+#import <AudioToolbox/AudioToolbox.h>
+
+
+
+static BOOL isEnabaled = YES;
 
 @class BBContent;
 @interface BBContent : NSObject
@@ -17,21 +22,26 @@
 -(void)publishBulletin:(id)arg1 destinations:(unsigned long long)arg2 ;
 @end
 
-
 @interface Alertivator : NSObject <LAListener>
 @end
 
-NSDictionary *bundleDefaults = [[NSUserDefaults standardUserDefaults]persistentDomainForName:@"com.blackstar.AvyaPre"];
-id status = [ bundleDefaults valueForKey:@"status"];
 
 @implementation Alertivator
 
 
-
 - (void)activator:(LAActivator *)activator  receiveEvent:(LAEvent *)event  forListenerName:(NSString *)listenerName{
-    
+    if(isEnabaled==NO){
+	
+  	
+	  UIImpactFeedbackGenerator *impactGenerator = [[UIImpactFeedbackGenerator alloc] initWithStyle:UINotificationFeedbackTypeSuccess];
+  	[impactGenerator impactOccurred];
+	isEnabaled = YES;
+	}else{
+	UIImpactFeedbackGenerator *impactGenerator = [[UIImpactFeedbackGenerator alloc] initWithStyle:UINotificationFeedbackTypeError];
+  	[impactGenerator impactOccurred];
+	isEnabaled = NO;
+	}
 }
-
 @end
 
 
@@ -58,27 +68,26 @@ id status = [ bundleDefaults valueForKey:@"status"];
 @class BBServer; 
 static void (*_logos_orig$_ungrouped$BBServer$publishBulletin$destinations$)(_LOGOS_SELF_TYPE_NORMAL BBServer* _LOGOS_SELF_CONST, SEL, BBBulletin *, unsigned long long); static void _logos_method$_ungrouped$BBServer$publishBulletin$destinations$(_LOGOS_SELF_TYPE_NORMAL BBServer* _LOGOS_SELF_CONST, SEL, BBBulletin *, unsigned long long); 
 
-#line 36 "Tweak.xm"
+#line 46 "Tweak.xm"
 
 static void _logos_method$_ungrouped$BBServer$publishBulletin$destinations$(_LOGOS_SELF_TYPE_NORMAL BBServer* _LOGOS_SELF_CONST __unused self, SEL __unused _cmd, BBBulletin * arg1, unsigned long long arg2) {
-
-	
-	  if ([status isEqual:@0]) {
-	  _logos_orig$_ungrouped$BBServer$publishBulletin$destinations$(self, _cmd, arg1, arg2);
-	  }else {
-
-	  }
+	NSDictionary *bundleDefaults = [[NSUserDefaults standardUserDefaults]persistentDomainForName:@"com.blackstar.AvyaPre"];
+	id status = [ bundleDefaults valueForKey:@"status"];
+	if ((![status isEqual:@0])&&isEnabaled) {
+	}else {
+ 		_logos_orig$_ungrouped$BBServer$publishBulletin$destinations$(self, _cmd, arg1, arg2);
+	}
 }
 
-static Alertivator *alertivatorInstance;
 
-static __attribute__((constructor)) void _logosLocalCtor_00ea7f0a(int __unused argc, char __unused **argv, char __unused **envp){
+static Alertivator *alertivatorInstance;
+static __attribute__((constructor)) void _logosLocalCtor_44292d65(int __unused argc, char __unused **argv, char __unused **envp){
     alertivatorInstance = [[Alertivator alloc] init];
     [[LAActivator sharedInstance] registerListener:alertivatorInstance 
-                                           forName:@"Enable / Disable Avya"];
+                                           forName:@"Enable/Disable Avya"];
 }
 
 
 static __attribute__((constructor)) void _logosLocalInit() {
 {Class _logos_class$_ungrouped$BBServer = objc_getClass("BBServer"); { MSHookMessageEx(_logos_class$_ungrouped$BBServer, @selector(publishBulletin:destinations:), (IMP)&_logos_method$_ungrouped$BBServer$publishBulletin$destinations$, (IMP*)&_logos_orig$_ungrouped$BBServer$publishBulletin$destinations$);}} }
-#line 56 "Tweak.xm"
+#line 65 "Tweak.xm"

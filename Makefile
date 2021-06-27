@@ -7,11 +7,12 @@ INSTALL_TARGET_PROCESSES = SpringBoard
 include $(THEOS)/makefiles/common.mk
 
 TWEAK_NAME = Avya
-export SDKVERSION = 13.7
+export SDKVERSION = 10.3
 Avya_LIBRARIES = activator
 
 Avya_FILES = Tweak.xm
 Avya_CFLAGS = -fobjc-arc
+Avya_FRAMEWORKS = UIKit
 
 include $(THEOS_MAKE_PATH)/tweak.mk
 SUBPROJECTS += avyapre
