@@ -1,6 +1,6 @@
 # Avya 1.0
 
-![](https://github.com/nasrawiziad/Avya/blob/main/Logo/avyalogo2.png?raw=true)
+![](https://github.com/nasrawiziad/Avya/blob/main/Logo/avyalogo3.png?raw=true)
 
 ### Introducing Avya:
 The ultimate notification banners hiding tweak.
