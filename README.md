@@ -21,7 +21,8 @@ You only get the private notification while your phone isn’t in your hand, for
 - Ability to include/exclude apps.
 - Timer for auto disable.
 - Ability to hide apps badges.
-- Ability to get alert when toggle enable/disabled
+- Ability to get alert when toggle enable/disabled.
+- Ability to include/exclude contacts.
 
 #### Where to get it? 
 You can get it from [Packix repo](https://repo.packix.com/ "Packix repo").
