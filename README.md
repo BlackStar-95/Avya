@@ -17,6 +17,7 @@ You only get the private notification while your phone isn’t in your hand, for
 - Haptic FeedBack when the tweak is enabled.
 
 #### Upcoming features:
+- Status bar dot indicator.
 - CC toggle to enable/disable.
 - Ability to include/exclude apps.
 - Timer for auto disable.
