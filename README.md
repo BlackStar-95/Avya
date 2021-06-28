@@ -10,6 +10,7 @@ Disabling notifications for any app in a click of a button!
 You only get the private notification while your phone isn’t in your hand, for example while showing photo/video to your friend you get that private notification banner that he shouldn’t see it.
 
 ### Requires Activator!
+> Tested only on iphone 12 pro max ios 14.1
 #### Features: 
 - Hide all notifications banners from the applications.
 - Activator toggle to enable/disable the tweak.
