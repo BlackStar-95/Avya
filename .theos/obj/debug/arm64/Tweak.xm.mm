@@ -5,7 +5,7 @@
 
 
 
-static BOOL isEnabaled = YES;
+static BOOL isEnabaled = NO;
 
 @class BBContent;
 @interface BBContent : NSObject
