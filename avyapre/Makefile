@@ -4,7 +4,7 @@ include $(THEOS)/makefiles/common.mk
 SYSROOT=$(THEOS)/sdks/iPhoneOS13.7.sdk
 
 BUNDLE_NAME = AvyaPre
-AvyaPre_FILES = AvyRootListController.m PFHeaderCell.mm
+AvyaPre_FILES = AvyRootListController.m
 AvyaPre_FRAMEWORKS = UIKit
 AvyaPre_PRIVATE_FRAMEWORKS = Preferences
 AvyaPre_INSTALL_PATH = /Library/PreferenceBundles
