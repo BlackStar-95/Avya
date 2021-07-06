@@ -14,7 +14,7 @@
 			<key>cell</key>
 			<string>PSSwitchCell</string>
 			<key>default</key>
-			<false/>
+			<true/>
 			<key>defaults</key>
 			<string>com.blackstar.AvyaPre</string>
 			<key>key</key>
@@ -26,29 +26,81 @@
 			<key>cell</key>
 			<string>PSGroupCell</string>
 			<key>label</key>
-			<string>Credits</string>
+			<string>add timer to auto disable the tweak. number in secends</string>
 		</dict>
 		<dict>
+			<key>cell</key>
+			<string>PSSwitchCell</string>
+			<key>default</key>
+			<true/>
+			<key>defaults</key>
+			<string>com.blackstar.AvyaPre</string>
+			<key>key</key>
+			<string>timer</string>
+			<key>label</key>
+			<string>Timer</string>
+		</dict>
+		<dict>
+  			<key>cell</key>
+  			<string>PSSliderCell</string>
+			<key>min</key>
+			<real>30</real>
+			<key>max</key>
+			<real>1800</real>
+			<key>defaults</key>
+			<string>com.blackstar.AvyaPre</string>
+  			<key>showValue</key>
+  			<true/>
+			<key>key</key>
+			<string>timeinsec</string>
+		</dict>
+		<dict>
+			<key>cell</key>
+			<string>PSGroupCell</string>
+			<key>label</key>
+			<string>Credits (clickable)</string>
+		</dict>
+		<!-- <dict>
 			<key>cell</key>
   			<string>PSButtonCell</string>
   			<key>label</key>
   			<string>Follow @BStar_dev</string>
 			<key>action</key>
 			<string>openTwitter</string>
-		</dict>
-		<dict>
+		</dict> -->
+		<!-- <dict>
 			<key>cell</key>
   			<string>PSButtonCell</string>
   			<key>label</key>
   			<string>Project Github</string>
 			<key>action</key>
 			<string>openGithub</string>
+		</dict> -->
+		<dict>
+			<key>cellClass</key>
+			<string>HBLinkTableCell</string>
+			<key>label</key>
+			<string>Follow! @BStar_dev</string>
+			<key>action</key>
+			<string>openTwitter</string>
+			<key>icon</key>
+			<string>twitter.png</string>
+		</dict>
+		<dict>
+			<key>cellClass</key>
+			<string>PSButtonCell</string>
+			<key>label</key>
+			<string>Project Github!</string>
+			<key>action</key>
+			<string>openGithub</string>
+			<key>icon</key>
+			<string>github.png</string>
 		</dict>
 		<dict>
 			<key>cell</key>
 			<string>PSGroupCell</string>
 			<key>label</key>
-			<string>Avya, Made With ❤️ For Support DM On Twitter! (v1.0)</string>
+			<string>Avya, Made With ❤️ For Support DM On Twitter! (v1.1)</string>
 		</dict>
 	</array>
 	<key>title</key>
