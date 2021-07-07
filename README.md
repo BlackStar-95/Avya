@@ -1,9 +1,11 @@
 # Avya 1.1
 
 ![](https://github.com/nasrawiziad/Avya/blob/main/Logo/avyalogo3.png?raw=true)
-####Changelog 1.1:
-> change avya tweak enable to NO (after resprint the tweak will be off)
-> Fixed issue on ios 13 
+
+
+#### Changelog 1.1:
+> Change tweak enable to NO (after resprint the tweak will be off)
+> Fixed issue on ios 13.
 > Added timer for the tweak.
 ### Introducing Avya:
 The ultimate notification banners hiding tweak.
