@@ -1,7 +1,10 @@
-# Avya 1.0
+# Avya 1.1
 
 ![](https://github.com/nasrawiziad/Avya/blob/main/Logo/avyalogo3.png?raw=true)
-
+####Changelog 1.1:
+> change avya tweak enable to NO (after resprint the tweak will be off)
+> Fixed issue on ios 13 
+> Added timer for the tweak.
 ### Introducing Avya:
 The ultimate notification banners hiding tweak.
 Disabling notifications for any app in a gesture!
@@ -16,12 +19,12 @@ You only get the private notification while your phone isn’t in your hand, for
 - Hide all notifications banners from the applications.
 - Activator toggle to enable/disable the tweak.
 - Haptic FeedBack when the tweak is enabled.
+- Timer for auto disable.
 
 #### Upcoming features:
 - Status bar dot indicator.
 - CC toggle to enable/disable.
 - Ability to include/exclude apps.
-- Timer for auto disable.
 - Ability to hide apps badges.
 - Ability to get alert when toggle enable/disabled.
 - Ability to include/exclude contacts.
