@@ -4,9 +4,10 @@
 
 
 #### Changelog 1.1:
-> Change tweak enable to NO (after resprint the tweak will be off)
-> Fixed issue on ios 13.
-> Added timer for the tweak.
+- isEnabaled = NO (after respring the tweak will be off)
+- Fixed issue on ios 13.
+- Added timer for the tweak.
+- Added respring button.
 ### Introducing Avya:
 The ultimate notification banners hiding tweak.
 Disabling notifications for any app in a gesture!
