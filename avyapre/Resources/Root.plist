@@ -41,7 +41,6 @@
 			<string>timer</string>
 			<key>label</key>
 			<string>Timer</string>
-
 		</dict>
 		<dict>
   			<key>cell</key>
