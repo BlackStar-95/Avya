@@ -1,14 +1,10 @@
 #import "Tweak.h"
 #include "activatorheaders/libactivator.h"
 #import <AudioToolbox/AudioToolbox.h>
-
-#define PLIST_PATH @"/var/mobile/Library/Preferences/AvyaPre.plist"
+#import <Cephei/HBPreferences.h>
 
 static BOOL isEnabaled = NO;
-
-inline int GetPrefInt(NSString *key) {
-	return [[[NSDictionary dictionaryWithContentsOfFile:PLIST_PATH] valueForKey:key] intValue];
-}
+static CGFloat timerFromPref;
 
 @class BBContent;
 @interface BBContent : NSObject
@@ -51,13 +47,11 @@ inline int GetPrefInt(NSString *key) {
 	}
 }
 //thread to sleep and then change the bool idEnabed to NO
-//must fix getting the data from the slider in the pref.....
 - (void) waitingTimer {
-	//should be fixed...
- 	//int newValue = GetPrefInt(@"timeinsec");
-	//double interval = newValue / 1.0;
-	//for now the timmer is set for 30 secs
-	[NSThread sleepForTimeInterval: 30.0];
+
+	//NSLog(@"FoundBS: %f", timerFromPref*60.0);
+	//change from min to sec and sleep...
+	[NSThread sleepForTimeInterval: timerFromPref*60.0];
 	isEnabaled = NO;
     //[pool release]; 
  }
@@ -76,9 +70,12 @@ inline int GetPrefInt(NSString *key) {
 //Abbilty to add the Enable/Disable Avya into the activator 
 static Alertivator *alertivatorInstance;
 %ctor{
+	HBPreferences *preferences = [[HBPreferences alloc] initWithIdentifier:@"com.blackstar.AvyaPre"];
     alertivatorInstance = [[Alertivator alloc] init];
     [[LAActivator sharedInstance] registerListener:alertivatorInstance 
                                            forName:@"Enable/Disable Avya"];
+	[preferences registerFloat:&timerFromPref default:1 forKey:@"timeinmin"];
 }
+
 
 

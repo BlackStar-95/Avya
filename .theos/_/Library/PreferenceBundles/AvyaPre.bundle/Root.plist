@@ -26,7 +26,9 @@
 			<key>cell</key>
 			<string>PSGroupCell</string>
 			<key>label</key>
-			<string>add timer to auto disable the tweak. number in secends</string>
+			<string>add timer to auto disable the tweak. number in minutes.</string>
+			<key>footerText</key>
+			<string>A respring is required to change the timer.</string>
 		</dict>
 		<dict>
 			<key>cell</key>
@@ -39,20 +41,33 @@
 			<string>timer</string>
 			<key>label</key>
 			<string>Timer</string>
+
 		</dict>
 		<dict>
   			<key>cell</key>
   			<string>PSSliderCell</string>
 			<key>min</key>
-			<real>30</real>
+			<real>1</real>
 			<key>max</key>
-			<real>1800</real>
+			<real>240</real>
 			<key>defaults</key>
 			<string>com.blackstar.AvyaPre</string>
   			<key>showValue</key>
   			<true/>
+			<!-- <key>isSegmented</key>
+  			<true/>
+			<key>segmentCount</key>
+  			<integer>10</integer> -->
 			<key>key</key>
-			<string>timeinsec</string>
+			<string>timeinmin</string>
+		</dict>
+		<dict>
+			<key>cell</key>
+  			<string>PSButtonCell</string>
+  			<key>label</key>
+  			<string>Respring</string>
+			<key>action</key>
+			<string>respringFunction</string>
 		</dict>
 		<dict>
 			<key>cell</key>
@@ -60,22 +75,6 @@
 			<key>label</key>
 			<string>Credits (clickable)</string>
 		</dict>
-		<!-- <dict>
-			<key>cell</key>
-  			<string>PSButtonCell</string>
-  			<key>label</key>
-  			<string>Follow @BStar_dev</string>
-			<key>action</key>
-			<string>openTwitter</string>
-		</dict> -->
-		<!-- <dict>
-			<key>cell</key>
-  			<string>PSButtonCell</string>
-  			<key>label</key>
-  			<string>Project Github</string>
-			<key>action</key>
-			<string>openGithub</string>
-		</dict> -->
 		<dict>
 			<key>cellClass</key>
 			<string>HBLinkTableCell</string>

@@ -2,14 +2,10 @@
 #import "Tweak.h"
 #include "activatorheaders/libactivator.h"
 #import <AudioToolbox/AudioToolbox.h>
-
-#define PLIST_PATH @"/var/mobile/Library/Preferences/AvyaPre.plist"
+#import <Cephei/HBPreferences.h>
 
 static BOOL isEnabaled = NO;
-
-inline int GetPrefInt(NSString *key) {
-	return [[[NSDictionary dictionaryWithContentsOfFile:PLIST_PATH] valueForKey:key] intValue];
-}
+static CGFloat timerFromPref;
 
 @class BBContent;
 @interface BBContent : NSObject
@@ -52,13 +48,11 @@ inline int GetPrefInt(NSString *key) {
 	}
 }
 
-
 - (void) waitingTimer {
+
 	
- 	
 	
-	
-	[NSThread sleepForTimeInterval: 30.0];
+	[NSThread sleepForTimeInterval: timerFromPref*60.0];
 	isEnabaled = NO;
     
  }
@@ -88,7 +82,7 @@ inline int GetPrefInt(NSString *key) {
 @class BBServer; 
 static void (*_logos_orig$_ungrouped$BBServer$publishBulletin$destinations$)(_LOGOS_SELF_TYPE_NORMAL BBServer* _LOGOS_SELF_CONST, SEL, BBBulletin *, unsigned long long); static void _logos_method$_ungrouped$BBServer$publishBulletin$destinations$(_LOGOS_SELF_TYPE_NORMAL BBServer* _LOGOS_SELF_CONST, SEL, BBBulletin *, unsigned long long); 
 
-#line 66 "Tweak.xm"
+#line 60 "Tweak.xm"
 
 static void _logos_method$_ungrouped$BBServer$publishBulletin$destinations$(_LOGOS_SELF_TYPE_NORMAL BBServer* _LOGOS_SELF_CONST __unused self, SEL __unused _cmd, BBBulletin * arg1, unsigned long long arg2) {
 	NSDictionary *bundleDefaults = [[NSUserDefaults standardUserDefaults]persistentDomainForName:@"com.blackstar.AvyaPre"];
@@ -101,13 +95,16 @@ static void _logos_method$_ungrouped$BBServer$publishBulletin$destinations$(_LOG
 
 
 static Alertivator *alertivatorInstance;
-static __attribute__((constructor)) void _logosLocalCtor_de551b8f(int __unused argc, char __unused **argv, char __unused **envp){
+static __attribute__((constructor)) void _logosLocalCtor_a09ca689(int __unused argc, char __unused **argv, char __unused **envp){
+	HBPreferences *preferences = [[HBPreferences alloc] initWithIdentifier:@"com.blackstar.AvyaPre"];
     alertivatorInstance = [[Alertivator alloc] init];
     [[LAActivator sharedInstance] registerListener:alertivatorInstance 
                                            forName:@"Enable/Disable Avya"];
+	[preferences registerFloat:&timerFromPref default:1 forKey:@"timeinmin"];
 }
+
 
 
 static __attribute__((constructor)) void _logosLocalInit() {
 {Class _logos_class$_ungrouped$BBServer = objc_getClass("BBServer"); { MSHookMessageEx(_logos_class$_ungrouped$BBServer, @selector(publishBulletin:destinations:), (IMP)&_logos_method$_ungrouped$BBServer$publishBulletin$destinations$, (IMP*)&_logos_orig$_ungrouped$BBServer$publishBulletin$destinations$);}} }
-#line 85 "Tweak.xm"
+#line 82 "Tweak.xm"

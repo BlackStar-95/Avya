@@ -6,5 +6,5 @@ Description: ***Requires Activator*** The ultimate notification banners hiding t
 Maintainer: blackstar
 Author: blackstar
 Section: Tweaks
-Depends: mobilesubstrate (>= 0.9.5000)
+Depends: mobilesubstrate (>= 0.9.5000), libactivator
 
