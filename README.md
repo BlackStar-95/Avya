@@ -33,13 +33,13 @@ You only get the private notification while your phone isn’t in your hand, for
 - Ability to include/exclude contacts.
 
 #### Where to get it? 
-You can get it from [Packix repo](https://repo.packix.com/ "Packix repo").
+You can get it from [Packix repo](https://repo.packix.com/package/com.blackstar.avya/ "Packix repo").
 
 Avya is free and open source, it's my first tweak, releasing a tweak always was my dream, I worked hard to develop this tweak.
 For more features feel free to contact me on [Twitter](https://twitter.com/BStar_dev "Twitter"), and don’t forget to [Follow Me @BStar_dev](https://twitter.com/BStar_dev "Follow Me @BStar_dev")!
 I am open for developing more tweaks (dm on Twitter).
 I am also looking for developers to help me continue to develop this tweak! (dm on Twitter).
-
+Special Thanks for [@eliassfeir1](https://twitter.com/eliassfeir1 "@eliassfeir1")!
 
 
 
