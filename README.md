@@ -3,11 +3,6 @@
 ![](https://github.com/nasrawiziad/Avya/blob/main/Logo/avyalogo3.png?raw=true)
 
 
-#### Changelog 1.1:
-- isEnabaled = NO (after respring the tweak will be off).
-- Fixed issue on ios 13.
-- Added timer for the tweak.
-- Added respring button.
 ### Introducing Avya:
 The ultimate notification banners hiding tweak.
 Disabling notifications for any app in a gesture!
@@ -39,8 +34,14 @@ Avya is free and open source, it's my first tweak, releasing a tweak always was 
 For more features feel free to contact me on [Twitter](https://twitter.com/BStar_dev "Twitter"), and don’t forget to [Follow Me @BStar_dev](https://twitter.com/BStar_dev "Follow Me @BStar_dev")!
 I am open for developing more tweaks (dm on Twitter).
 I am also looking for developers to help me continue to develop this tweak! (dm on Twitter).
+
 Special Thanks for [@eliassfeir1](https://twitter.com/eliassfeir1 "@eliassfeir1")!
 
+#### Changelog 1.1:
+- isEnabaled = NO (after respring the tweak will be off).
+- Fixed issue on ios 13.
+- Added timer for the tweak.
+- Added respring button.
 
 
 [![](https://github.com/nasrawiziad/Avya/blob/main/Logo/blackstarlogo1.png?raw=true)](https://twitter.com/BStar_dev "![](https://github.com/nasrawiziad/Avya/blob/main/Logo/blackstarlogo1.png?raw=true)")
