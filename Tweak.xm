@@ -62,6 +62,7 @@ inline int GetPrefInt(NSString *key) {
     //[pool release]; 
  }
 @end
+%group tweak
 //Hooking into the notification, if avya is enabled && activator bool isEnabled disable the banners else %orig
 %hook BBServer
 -(void)publishBulletin:(BBBulletin *)arg1 destinations:(unsigned long long)arg2 {
@@ -73,12 +74,31 @@ inline int GetPrefInt(NSString *key) {
 	}
 }
 %end
+
+%hook _UIStatusBar
+  -(void)setNeedsLayout {
+    %orig;
+
+    if(!isTweakOnIndicator) {
+      isTweakOnIndicator = [[UIView alloc] init];
+      isTweakOnIndicator.alpha = 1;
+      isTweakOnIndicator.backgroundColor = [UIColor greenColor];
+      isTweakOnIndicator.translatesAutoresizingMaskIntoConstraints = NO;
+	  isTweakOnIndicator.frame = CGRectMake(0,0,10,10);
+      [self addSubview:isTweakOnIndicator];
+	  [isTweakOnIndicator.centerXAnchor constraintEqualToAnchor: self.centerXAnchor].active = YES;
+	  [isTweakOnIndicator.centerYAnchor constraintEqualToAnchor: self.centerYAnchor].active = YES;
+    }
+  }
+%end
+%end
 //Abbilty to add the Enable/Disable Avya into the activator 
 static Alertivator *alertivatorInstance;
 %ctor{
     alertivatorInstance = [[Alertivator alloc] init];
     [[LAActivator sharedInstance] registerListener:alertivatorInstance 
                                            forName:@"Enable/Disable Avya"];
+	%init(tweak);
 }
 
 

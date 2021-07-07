@@ -1,7 +1,7 @@
 ARCHS = arm64 arm64e
 
 include $(THEOS)/makefiles/common.mk
-SYSROOT=$(THEOS)/sdks/iPhoneOS13.7.sdk
+SYSROOT=$(THEOS)/sdks/iPhoneOS14.4.sdk
 
 BUNDLE_NAME = AvyaPre
 AvyaPre_FILES = AvyRootListController.m
