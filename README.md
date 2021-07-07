@@ -8,7 +8,7 @@ The ultimate notification banners hiding tweak.
 Disabling notifications for any app in a gesture!
 
 ### Requires Activator!
-> Tested only on iphone 12 pro max ios 14.1
+> Supports ios 13.0-14.5
 
 #### Why you need it? 
 You only get the private notification while your phone isn’t in your hand, for example while showing photo/video to your friend you get that private notification banner that he shouldn’t see it.
