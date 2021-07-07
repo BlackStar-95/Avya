@@ -28,29 +28,20 @@ inline int GetPrefInt(NSString *key) {
 @interface Alertivator : NSObject <LAListener>
 @end
 
-
+//implement the alertivator
 @implementation Alertivator
-- (void) waitingTimer //must fix getting the data from the slider in the pref.....
- {
-	//should be fixed...
- 	//int newValue = GetPrefInt(@"timeinsec");
-	//double interval = newValue / 1.0;
-	//for now the timmer is set for 30 secs
-	[NSThread sleepForTimeInterval: 30.0];
-	isEnabaled = NO;
-    //[pool release]; 
- }
+// when calling the gesture
 - (void)activator:(LAActivator *)activator 
      receiveEvent:(LAEvent *)event 
   		forListenerName:(NSString *)listenerName{
 	NSDictionary *bundleDefaults = [[NSUserDefaults standardUserDefaults]persistentDomainForName:@"com.blackstar.AvyaPre"];
-	id timer = [ bundleDefaults valueForKey:@"timer"];
+	id timerisEnabled = [ bundleDefaults valueForKey:@"timer"];
 
     if(isEnabaled==NO){
 	UIImpactFeedbackGenerator *impactGenerator = [[UIImpactFeedbackGenerator alloc] initWithStyle:UINotificationFeedbackTypeSuccess];
   	[impactGenerator impactOccurred];	
 	isEnabaled = YES;
-	if (![timer isEqual:@0]){
+	if (![timerisEnabled isEqual:@0]){
 	[self performSelectorInBackground:@selector(waitingTimer) withObject:nil];
 	}
 	}else{
@@ -59,8 +50,19 @@ inline int GetPrefInt(NSString *key) {
 	isEnabaled = NO;
 	}
 }
+//thread to sleep and then change the bool idEnabed to NO
+//must fix getting the data from the slider in the pref.....
+- (void) waitingTimer {
+	//should be fixed...
+ 	//int newValue = GetPrefInt(@"timeinsec");
+	//double interval = newValue / 1.0;
+	//for now the timmer is set for 30 secs
+	[NSThread sleepForTimeInterval: 30.0];
+	isEnabaled = NO;
+    //[pool release]; 
+ }
 @end
-
+//Hooking into the notification, if avya is enabled && activator bool isEnabled disable the banners else %orig
 %hook BBServer
 -(void)publishBulletin:(BBBulletin *)arg1 destinations:(unsigned long long)arg2 {
 	NSDictionary *bundleDefaults = [[NSUserDefaults standardUserDefaults]persistentDomainForName:@"com.blackstar.AvyaPre"];
@@ -71,7 +73,7 @@ inline int GetPrefInt(NSString *key) {
 	}
 }
 %end
-
+//Abbilty to add the Enable/Disable Avya into the activator 
 static Alertivator *alertivatorInstance;
 %ctor{
     alertivatorInstance = [[Alertivator alloc] init];

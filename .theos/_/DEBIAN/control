@@ -6,5 +6,5 @@ Maintainer: blackstar
 Author: blackstar
 Section: Tweaks
 Depends: mobilesubstrate (>= 0.9.5000)
-Version: 1.1-16+debug
+Version: 1.1-17+debug
 Installed-Size: 336
