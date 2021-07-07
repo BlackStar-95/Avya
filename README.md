@@ -4,7 +4,7 @@
 
 
 #### Changelog 1.1:
-- isEnabaled = NO (after respring the tweak will be off)
+- isEnabaled = NO (after respring the tweak will be off).
 - Fixed issue on ios 13.
 - Added timer for the tweak.
 - Added respring button.
