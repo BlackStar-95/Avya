@@ -1,7 +1,9 @@
-/Users/ziadnasrawi/avya/.theos/obj/arm64/Tweak.xm.3a931590.o: \
+/Users/ziadnasrawi/avya/.theos/obj/arm64/Tweak.xm.d0831118.o: \
   /Users/ziadnasrawi/avya/.theos/obj/arm64/Tweak.xm.mm \
   /Users/ziadnasrawi/theos/Prefix.pch \
   /Users/ziadnasrawi/theos/vendor/include/theos/BackwardsCompat.h \
+  /Users/ziadnasrawi/theos/sdks/iPhoneOS14.4.sdk/usr/include/mach-o/compact_unwind_encoding.modulemap \
+  /Users/ziadnasrawi/theos/sdks/iPhoneOS14.4.sdk/usr/include/mach-o/dyld.modulemap \
   /Users/ziadnasrawi/theos/vendor/include/theos/IOSMacros.h \
   /Users/ziadnasrawi/theos/vendor/include/HBLog.h \
   /Users/ziadnasrawi/theos/vendor/include/CoreFoundation/CFLogUtilities.h \
@@ -20,6 +22,10 @@
 /Users/ziadnasrawi/theos/Prefix.pch:
 
 /Users/ziadnasrawi/theos/vendor/include/theos/BackwardsCompat.h:
+
+/Users/ziadnasrawi/theos/sdks/iPhoneOS14.4.sdk/usr/include/mach-o/compact_unwind_encoding.modulemap:
+
+/Users/ziadnasrawi/theos/sdks/iPhoneOS14.4.sdk/usr/include/mach-o/dyld.modulemap:
 
 /Users/ziadnasrawi/theos/vendor/include/theos/IOSMacros.h:
 
