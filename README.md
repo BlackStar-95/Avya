@@ -36,7 +36,7 @@ I am open for developing more tweaks (dm on Twitter).
 I am also looking for developers to help me continue to develop this tweak! (dm on Twitter).
 
 Special Thanks for [@eliassfeir1](https://twitter.com/eliassfeir1 "@eliassfeir1")!
-Special Thanks for [@Lacertosus](https://twitter.com/LacertosusDeus "@LacertosusDeus")!
+and [@Lacertosus](https://twitter.com/LacertosusDeus "@LacertosusDeus")!
 
 #### Changelog 1.1:
 - isEnabaled = NO (after respring the tweak will be off).
