@@ -1,7 +1,7 @@
 ARCHS = arm64 arm64e
 
 include $(THEOS)/makefiles/common.mk
-SYSROOT=$(THEOS)/sdks/iPhoneOS13.7.sdk
+# SYSROOT=$(THEOS)/sdks/iPhoneOS13.7.sdk
 
 BUNDLE_NAME = AvyaPre
 AvyaPre_FILES = AvyRootListController.m
@@ -9,6 +9,8 @@ AvyaPre_FRAMEWORKS = UIKit
 AvyaPre_PRIVATE_FRAMEWORKS = Preferences
 AvyaPre_INSTALL_PATH = /Library/PreferenceBundles
 AvyaPre_CFLAGS = -fobjc-arc
+AvyaPre_LIBRARIES = sparkapplist
+AvyaPre_EXTRA_FRAMEWORKS = Cephei CepheiPrefs
 
 include $(THEOS_MAKE_PATH)/bundle.mk
 internal-stage::

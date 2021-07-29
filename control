@@ -1,10 +1,10 @@
 Package: com.blackstar.avya
 Name: Avya
-Version: 1.1-1
+Version: 1.2
 Architecture: iphoneos-arm
 Description: ***Requires Activator*** The ultimate notification banners hiding tweak.Disabling notifications for any app in a gesture!
 Maintainer: blackstar
 Author: blackstar
 Section: Tweaks
-Depends: mobilesubstrate (>= 0.9.5000), libactivator
+Depends: mobilesubstrate (>= 0.9.5000), libactivator, preferenceloader, com.spark.libsparkapplist
 
