@@ -1,4 +1,5 @@
 #include "AvyRootListController.h"
+#import "SparkAppListTableViewController.h"
 #import <spawn.h>
 @implementation AvyRootListController
 
@@ -19,5 +20,13 @@
 	pid_t pid;
 	const char *args[] = {"sbreload", NULL, NULL, NULL};
 	posix_spawn(&pid, "usr/bin/sbreload", NULL, NULL, (char *const *)args, NULL);
+}
+-(void)selectExcludeApps
+{
+    // Replace "com.spark.notchlessprefs" and "excludedApps" with your strings
+    SparkAppListTableViewController* s = [[SparkAppListTableViewController alloc] initWithIdentifier:@"com.blackstar.AvyaPre" andKey:@"excludedApps"];
+
+    [self.navigationController pushViewController:s animated:YES];
+    self.navigationItem.hidesBackButton = FALSE;
 }
 @end
